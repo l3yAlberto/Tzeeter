@@ -5,72 +5,116 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title></title>
 </head>
 
 <body>
-    <ul>
-        <li><a href="Home">Home</a></li>
-        <li><a href="Explore">Explore</a></li>
-        <li><a href="Notifications">Notifications</a></li>
-        <li><a href="Messages">Messages</a></li>
-        <li><a href="Bookmarks">Bookmarks</a></li>
-        <li><a href="Lists">Lists</a></li>
-        <li><a href="Profile">Profile</a></li>
-        <li><a href="More">More</a></li>
+    <ul class="navigation">
+        <li>
+            <a href="Home">Home</a>
+        </li>
+        <li>
+            <a href="Explore">Explore</a>
+        </li>
+        <li>
+            <a href="Notifications">Notifications</a>
+        </li>
+        <li>
+            <a href="Messages">Messages</a>
+        </li>
+        <li>
+            <a href="Bookmarks">Bookmarks</a>
+        </li>
+        <li>
+            <a href="Lists">Lists</a>
+        </li>
+        <li>
+            <a href="Profile">Profile</a>
+        </li>
+        <li>
+            <a href="More">More</a>
+        </li>
     </ul>
 
-    <img src="gato.jpg" width="64">
+    <img src="image/gato.jpg" width="64">
+    <button>Edit profile</button>
 
-    <h3>Bruno Góis Mateus</h3>
+    <h3 class="nome">Bruno Góis Mateus</h3>
 
-    <h5>@brunomateuss</h2>
+    <h5 class="tzeet">@brunomateuss</h2>
 
-        <button>Edit profile</button>
+    <h4 class="content">
+        Android Engineer - Adjunct Professor and Researcher in Mobile Development @ Federal University of Ceará
+    </h4>
 
-        <br>
-
-        <ul>
-            <p>
-                <li><a href="narnia">Fortaleza</a></li>
-                <li><a href="narnia">Joined January 2010</a></li>
-            </p>
-            <p>
-                <li><a href="narnia">96 following</a></li>
-                <li><a href="narnia">79 followers</a></li>
-            </p>
+    <div class="statistic">
+        <ul class="infoUser">
+            <li>
+                Fortaleza
+            </li>
+            <li>
+                Joined January 2010
+            </li>
         </ul>
+        <ul>
+            <li>
+                <a href="following">
+                    <b>96</b> following
+                </a>
+            </li>
+            <li>
+                <a href="followers">
+                    <b>79</b> followers
+                </a>
+            </li>
+        </ul>
+    </div>
 
-        <div>
-            <a href="narnia">Tzeets</a>
-            <a href="narnia">Tzeets & replies</a>
-            <a href="narnia">Media</a>
-            <a href="narnia">Links</a>
-        </div>
+    <div class="publication">
+        <a href="narnia">Tzeets</a>
+        <a href="narnia">Tzeets & replies</a>
+        <a href="narnia">Media</a>
+        <a href="narnia">Links</a>
+    </div>
 
+    <div class="twiter">
         <p>
-            <img src="gato1.jpg" width="64">
-            <span>Atila lamarino @oatila Oct 21,2021</span>
-            <p>
-                Se vai furar orçamento, dá pra voltar a financiar absorventes e ciência? Ou só voto mesmo?
-            </p>
-            <a href="narnia">Reply</a>
-            <a href="narnia">Retzeet</a>
-            <a href="narnia">Like</a>
-            <a href="narnia">Share</a>
+            <img src="image/gato1.jpg" width="64">
+            <span class="nome">Atila lamarino</span>
+            <span class="infoUser">@oatila Oct 21,2021</span>
         </p>
 
-        <p>
-            <img src="gato.jpg" width="64">
-            <span>Bruno Góis Mateus @brunomateuss Jun 1,2011</span>
-            <p>
-                something really bad is happing in somewhere in the world.. gmal is off
-            </p>
-            <a href="narnia">Reply</a>
-            <a href="narnia">Retzeet</a>
-            <a href="narnia">Like</a>
-            <a href="narnia">Share</a>
+        <span class="content">
+            Se vai furar orçamento, dá pra voltar a financiar absorventes e ciência? Ou só voto mesmo?
+        </span>
+
+        <p class="action">
+            <a href="Reply">Reply</a>
+            <a href="Retzeet">Retzeet</a>
+            <a href="Like">Like</a>
+            <a href="Share">Share</a>
         </p>
+    </div>
+
+    <div class="twiter">
+        <p>
+            <img src="image/gato.jpg" width="64">
+            <span class="nome">Bruno Góis Mateus</span>
+            <span class="infoUser">@brunomateuss Jun 1,2011</span>
+        </p>
+
+        <span class="content">
+            something really bad is happing in somewhere in the world.. gmal is off
+        </span>
+
+        <p class="action">
+            <a href="Reply">Reply</a>
+            <a href="Retzeet">Retzeet</a>
+            <a href="Like">Like</a>
+            <a href="Share">Share</a>
+        </p>
+    </div>
 
 </body>
 

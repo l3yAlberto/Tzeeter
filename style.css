@@ -1,0 +1,93 @@
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    padding-left: 0px;
+}
+
+/* Navegação */
+
+.navigation > li {
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.navigation > li, .publication a {
+    color: rgb(15, 20, 25);
+    border-radius: 15px;
+}
+
+.navigation a {
+    color: rgb(15, 20, 25);
+    vertical-align: super;
+    padding-left: 10px;
+}
+
+.navigation li:hover, .publication a:hover {
+    background-color: rgba(15, 25, 20, 0.1);
+}
+
+img {
+    border-radius: 50%;
+}
+
+/* Estatísticas */
+
+.statistic {
+    padding-left: 20px;
+}
+
+.infoUser, .tzeet, .statistic a{
+    color: rgb(83, 100, 113);
+}
+
+.content, .nome, .statistic b{
+    color: rgb(15, 20, 25);  
+}
+
+.statistic ul {
+    display: flex;
+}
+
+.statistic li {
+    padding-right: 10px;
+}
+
+.statistic li:hover {
+    text-decoration: underline;
+}
+
+/* Ações */
+
+.action a {
+    color: rgb(83, 100, 113);
+    border-radius: 15px;
+}
+
+.action a:hover {
+    text-decoration: underline;
+}
+
+.action [href*="Reply"]:hover, .action [href*="Share"]:hover {
+    background-color: rgba(29, 155, 240, 0.1);
+    color: rgba(29, 155, 240, 1);
+}
+
+.action [href*="Retzeet"]:hover {
+    background-color: rgba(0, 186, 124, 0.1);
+    color: gba(0, 186, 124, 1);
+}
+
+.action [href*="Like"]:hover {
+    color: rgba(249, 24, 128, 1);
+}
+
+.action [href*="Like"]:hover, .twiter:hover {
+    background-color: rgba(249, 24, 128, 0.1);
+}
