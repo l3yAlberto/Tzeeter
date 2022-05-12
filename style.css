@@ -1,7 +1,3 @@
-a {
-    text-decoration: none;
-}
-
 li {
     list-style-type: none;
 }
@@ -29,16 +25,23 @@ ul {
     padding-left: 10px;
 }
 
-.navigation li:hover, .publication a:hover {
+.bgColor:hover, .publication a:hover {
     background-color: rgba(15, 25, 20, 0.1);
 }
 
-img {
-    border-radius: 50%;
+.bgColor:hover {
+    max-width: max-content;
 }
 
-/* Estatísticas */
+.bgColor {
+    text-decoration: none;
+}
 
+/* img {
+    border-radius: 50%;
+} */
+
+/* Estatísticas */
 .statistic {
     padding-left: 20px;
 }
