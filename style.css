@@ -1,10 +1,10 @@
-li {
+/* li {
     list-style-type: none;
 }
 
 ul {
     padding-left: 0px;
-}
+} */
 
 /* Navegação */
 
@@ -14,9 +14,9 @@ ul {
     align-items: center;
 }
 
-.navigation > li, .publication a {
+.navigation > li, .publication button {
     color: rgb(15, 20, 25);
-    border-radius: 15px;
+    /* border-radius: 15px; */
 }
 
 .navigation a {
@@ -27,6 +27,7 @@ ul {
 
 .bgColor:hover, .publication button:hover {
     background-color: rgba(15, 25, 20, 0.1);
+    color: rgb(15, 20, 25);
 }
 
 .bgColor:hover {
