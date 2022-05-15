@@ -14,11 +14,11 @@
 
 <body>
     <div class="container">
-        <div class="row ">
+        <div class="row justify-content-center">
 
             <!-- Coluna 1  -->
             <!-- sm, md, lg, xl, and xxl -->
-            <div class="col-1 col-xl-2 border border-primary">
+            <div class="col-1 col-xl-2">
                 <img class="py-3 px-xl-3 d-flex d-xl-inline mx-auto justify-content-center" src="image/tiziu.png" alt="">
                 <div class="p-1">
                     <nav class="nav flex-column">
@@ -72,15 +72,18 @@
             </div>
 
             <!-- Coluna 2  -->
-            <div class="col-8 border border-primary">
+            <div class="col-8">
 
-                <img class="rounded-pill" src="image/gato.jpg" width="64">
-                <button type="button" class="btn btn-primary rounded-pill">Edit profile</button>
-
-                <h3 class="nome">Bruno Góis Mateus</h3>
-
-                <h5 class="tzeet">@brunomateuss</h2>
-
+                <div class="px-4 py-3 border-start border-end border-1-secondary">
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="image/gato.jpg" width="150">
+                        <button type="button" class="btn btn-primary rounded-pill position-absolute bottom-0 end-0">Edit profile</button>
+                    </div>
+    
+                    <h3 class="nome">Bruno Góis Mateus</h3>
+    
+                    <h5 class="tzeet">@brunomateuss</h2>
+    
                     <h4 class="content">
                         Android Engineer - Adjunct Professor and Researcher in Mobile Development @ Federal University
                         of Ceará
@@ -110,100 +113,144 @@
                             </li>
                         </ul>
                     </div>
+                </div>
 
-                    <ul class="publication nav justify-content-center">
-                        <li class="nav-item"><a href="#" class="nav-link p-2">Tzeets</a></li>
-                        <li class="nav-item" ><a href="#" class="nav-link p-2">Tzeets & replies</a></li>
-                        <li class="nav-item" ><a href="#" class="nav-link p-2">Media</a></li>
-                        <li class="nav-item" ><a href="#" class="nav-link p-2">Links</a></li>
-                    </ul>
 
-                    <!-- <div class="publication">
-                        <a href="narnia">Tzeets</a>
-                        <a href="narnia">Tzeets & replies</a>
-                        <a href="narnia">Media</a>
-                        <a href="narnia">Links</a>
-                    </div> -->
+                    <nav>
+                        <div class="nav nav-tabs nav-justified publication" id="nav-tab" role="tablist">
+                            <button class="nav-link active fw-bold" id="nav-tzeets-tab" data-bs-toggle="tab" data-bs-target="#nav-tzeets" type="button" role="tab" aria-controls="nav-tzeets" aria-selected="true">Tzeets</button>
+                            <button class="nav-link fw-bold" id="nav-tzeetsReplies-tab"  data-bs-toggle="tab" data-bs-target="#nav-tzeetsReplies" type="button" role="tab" aria-controls="nav-tzeetsReplies" aria-selected="true">Tzeets & replies</button>
+                            <button class="nav-link fw-bold" id="nav-media-tab"  data-bs-toggle="tab" data-bs-target="#nav-media" type="button" role="tab" aria-controls="nav-media" aria-selected="false">Media</button>
+                            <button class="nav-link fw-bold" id="nav-links-tab" data-bs-toggle="tab" data-bs-target="#nav-links" type="button" role="tab" aria-controls="nav-links" aria-selected="false">Links</button>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-tzeets" role="tabpanel" aria-labelledby="nav-tzeets-tab" tabindex="0">
+                            <div class="px-4 py-3 witer border-start border-bottom border-end border-1-secondary">
+                                <div>
+                                    <img src="image/gato1.jpg" class="rounded-circle" width="64">
+                                    <span class="nome">Atila lamarino</span>
+                                    <span class="infoUser">@oatila Oct 21,2021</span>
+                                </div>
+        
+                                <div class="content">
+                                    Se vai furar orçamento, dá pra voltar a financiar absorventes e ciência? Ou só voto mesmo?
+                                </div>
+        
+                                <div class="container">
+                                    <ul class="nav justify-content-center action">
+                                        <li class="col-2 nav-item d-flex justify-content-center">
+                                            <a href="Reply">
+                                                <i class="p-2 rounded-circle bi bi-chat"></i>
+                                                200
+                                            </a>    
+                                        </li>
+                                        <li class="col-2 nav-item d-flex justify-content-center">
+                                            <a href="Retzeet">
+                                                <i class="p-2 rounded-circle bi bi-arrow-repeat"></i>
+                                                100
+                                            </a>    
+                                        </li>
+                                        <li class="col-2 nav-item d-flex justify-content-center">
+                                            <a href="Like">
+                                                <i class="p-2 rounded-circle bi bi-heart"></i>
+                                                120
+                                            </a>    
+                                        </li>
+                                        <li class="col-2 nav-item d-flex justify-content-center">
+                                            <a href="Share">
+                                                <i class="p-2 rounded-circle bi bi-upload"></i>
+                                                
+                                            </a>    
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+        
+                            <div class="px-4 py-3 twiter border-start border-bottom border-end border-1-secondary">
+                                <div>
+                                    <img src="image/gato.jpg" class="rounded-circle" width="64">
+                                    <span class="nome">Bruno Góis Mateus</span>
+                                    <span class="infoUser">@brunomateuss Jun 1,2011</span>
+                                </div>
+        
+                                <div class="content">
+                                    something really bad is happing in somewhere in the world.. gmal is off
+                                </div>
+        
+                                <div class="container">
+                                    <ul class="nav justify-content-center action">
+                                        <li class="col-2 nav-item d-flex justify-content-center">
+                                            <a href="Reply">
+                                                <i class="p-2 rounded-circle bi bi-chat"></i>
+                                                200
+                                            </a>    
+                                        </li>
+                                        <li class="col-2 nav-item d-flex justify-content-center">
+                                            <a href="Retzeet">
+                                                <i class="p-2 rounded-circle bi bi-arrow-repeat"></i>
+                                                100
+                                            </a>    
+                                        </li>
+                                        <li class="col-2 nav-item d-flex justify-content-center">
+                                            <a href="Like">
+                                                <i class="p-2 rounded-circle bi bi-heart"></i>
+                                                120
+                                            </a>    
+                                        </li>
+                                        <li class="col-2 nav-item d-flex justify-content-center">
+                                            <a href="Share">
+                                                <i class="p-2 rounded-circle bi bi-upload"></i>
+                                                
+                                            </a>    
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-tzeetsReplies" role="tabpanel" aria-labelledby="nav-tzeetsReplies-tab" tabindex="0">
 
-                    <div class="twiter">
-                        <p>
-                            <img src="image/gato1.jpg" class="rounded-pill" width="64">
-                            <span class="nome">Atila lamarino</span>
-                            <span class="infoUser">@oatila Oct 21,2021</span>
-                        </p>
-
-                        <span class="content">
-                            Se vai furar orçamento, dá pra voltar a financiar absorventes e ciência? Ou só voto mesmo?
-                        </span>
-
-                        <p class="action">
-                            <a href="Reply">Reply</a>
-                            <a href="Retzeet">Retzeet</a>
-                            <a href="Like">Like</a>
-                            <a href="Share">Share</a>
-                        </p>
-                    </div>
-
-                    <div class="twiter">
-                        <p>
-                            <img src="image/gato.jpg" class="rounded-pill" width="64">
-                            <span class="nome">Bruno Góis Mateus</span>
-                            <span class="infoUser">@brunomateuss Jun 1,2011</span>
-                        </p>
-
-                        <span class="content">
-                            something really bad is happing in somewhere in the world.. gmal is off
-                        </span>
-
-                        <p class="action">
-                            <a href="Reply">Reply</a>
-                            <a href="Retzeet">Retzeet</a>
-                            <a href="Like">Like</a>
-                            <a href="Share">Share</a>
-                        </p>
+                        </div>
+                        <div class="tab-pane fade" id="nav-media" role="tabpanel" aria-labelledby="nav-media-tab" tabindex="0">
+                            
+                        </div>
+                        <div class="tab-pane fade" id="nav-links" role="tabpanel" aria-labelledby="nav-links-tab" tabindex="0">
+                            
+                        </div>
                     </div>
             </div>
 
             <!-- Coluna 3  -->
-            <div class="col-2 d-none d-lg-inline border border-primary">
-                <img src="image/tiziu.png" alt="">
-                <ul class="navigation">
-                    <li>
-                        <i class="bi bi-house-door"></i>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <i class="bi bi-hash"></i>
-                        <a href="#">Explore</a>
-                    </li>
-                    <li>
-                        <i class="bi bi-bell"></i>
-                        <a href="#">Notifications</a>
-                    </li>
-                    <li>
-                        <i class="bi bi-envelope"></i>
-                        <a href="#">Messages</a>
-                    </li>
-                    <li>
-                        <i class="bi bi-bookmark"></i>
-                        <a href="#">Bookmarks</a>
-                    </li>
-                    <li>
-                        <i class="bi bi-list"></i>
-                        <a href="#">Lists</a>
-                    </li>
-                    <li>
-                        <i class="bi bi-person-fill"></i>
-                        <a href="#">Profile</a>
-                    </li>
-                    <li>
-                        <i class="bi bi-three-dots"></i>
-                        <a href="#">More</a>
-                    </li>
-                </ul>
+            <div class="col-2 d-none d-lg-inline">
+                <div class="rounded-pill py-1">
+                    <label class="input-group ">
+                        <i class="input-group-text bi bi-search fundo"></i>
+                        <input type="text" class="form-control fundo" placeholder="Username">
+                    </label>
+                </div>
+                <div class="fundo">
+                    <h5 class="py-1 px-3 fw-bold">Talvez você curta</h5>
+                    <div class="d-flex justify-content-evenly py-1">
+                        <img src="image/gato.jpg" class="rounded-circle" width="48">
+                        <span class="">Carlos</span>
+                        <button type="button" class="btn btn-primary">Seguir</button>
+                    </div>
+                    <div class="d-flex justify-content-evenly py-1">
+                        <img src="image/gato.jpg" class="rounded-circle" width="48">
+                        <span class="">Maria</span>
+                        <button type="button" class="btn btn-primary">Seguir</button>
+                    </div>
+                    <div class="d-flex  justify-content-evenly py-1">
+                        <img src="image/gato.jpg" class="rounded-circle" width="48">
+                        <span class="">Ana</span>
+                        <button type="button" class="btn btn-primary">Seguir</button>
+                    </div>
+                    <a href="#" class="py-1 px-3">Mostrar mais</a>
+                </div>
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
