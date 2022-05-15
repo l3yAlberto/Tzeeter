@@ -8,3 +8,4 @@
 
 ### [Lista 02 - Aplicando CSS na página do perfil](https://github.com/l3yAlberto/Tzeeter/tree/e7b4729c5562bb81bdc2c72824fa96fc926e2231)
 
+### [Lista 03 - Usando o Bootstrap em nosso favor](https://github.com/l3yAlberto/Tzeeter/tree/a2a339a8719aaeafc26095dd3076d094cdf4196a)
