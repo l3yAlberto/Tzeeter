@@ -24,6 +24,7 @@ function inputEvent(div) {
         if (!textIsEmpty && restanteCaracter < 40) {
             countSpan.textContent = restanteCaracter;
             if (restanteCaracter < 0) {
+                buttonEnviar.disabled = true;
                 countSpan.style.color = "rgb(255, 0, 0)";
             } else {
                 countSpan.style.color = "rgb(255, 200, 0)";

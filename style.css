@@ -113,3 +113,7 @@ ul {
 [contentEditable=true]:empty:not(:focus)::before {
     content: attr(placeholder);
 } 
+
+[contentEditable=true] {
+    word-break: break-all;
+}
