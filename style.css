@@ -112,4 +112,4 @@ ul {
 /* que magia negra é essa? https://stackoverflow.com/a/18368720 */
 [contentEditable=true]:empty:not(:focus)::before {
     content: attr(placeholder);
-}
+} 
