@@ -1,7 +1,7 @@
 const home = document.getElementById("home");
 const bntTzeet = document.getElementById("bntTzeet");
-inputEvent(home);
-inputEvent(bntTzeet);
+home && inputEvent(home);
+bntTzeet && inputEvent(bntTzeet);
 
 /**
  * @param { HTMLElement } div 
