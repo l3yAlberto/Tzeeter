@@ -146,140 +146,151 @@
 
             <!-- Coluna 2  -->
             <div class="col-6">
+                <div class="px-4 py-3 border-start border-end">
+                    <h4>Profile</h4>
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="image/gato.jpg" width="150">
+                        <button type="button" class="btn btn-primary rounded-pill position-absolute bottom-0 end-0">Edit profile</button>
+                    </div>
+    
+                    <h3 class="nome">Bruno Góis Mateus</h3>
+    
+                    <h5 class="tzeet">@brunomateuss</h2>
+    
+                    <h4 class="content">
+                        Android Engineer - Adjunct Professor and Researcher in Mobile Development @ Federal University of Ceará
+                    </h4>
 
-                <div class="px-4 py-3 border-start border-end border-bottom">
-                    <h4>Home</h4>
-                    <div class="d-flex">
-                        <div>
-                            <img class="rounded-circle " src="image/gato.jpg" width="64">
-                        </div>
-                        <div class="mt-5 px-2 w-100" id="home">
-                            <!-- Área de entrada -->
-                            <div contentEditable="true" placeholder="O que você está pensando?"></div>
-                            <div class="py-2 border-bottom">
-                                <!-- Configuração do reply -->
-                                <a href="" class="text-decoration-none rounded-pill colorBlue px-1">
-                                    <i class="bi bi-globe"></i>
-                                    <strong>Everyone can reply</strong>
+                    <div class="statistic">
+                        <ul class="infoUser nav">
+                            <li class="p-1">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Fortaleza</span>
+                            </li>
+                            <li class="p-1">
+                                <i class="bi bi-calendar3"></i>
+                                <span>Joined January 2010</span>
+                            </li>
+                        </ul>
+                        <ul class="nav">
+                            <li class="p-1">
+                                <a class="nav-link text-dark" href="following">
+                                    <b>96</b> following
                                 </a>
+                            </li>
+                            <li class="p-1">
+                                <a class="nav-link text-dark" href="followers">
+                                    <b>79</b> followers
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tzeets | Tzeets & replies | Media | Links -->
+                <nav>
+                    <div class="nav nav-tabs nav-justified publication" id="nav-tab" role="tablist">
+                        <button class="nav-link active fw-bold" id="nav-tzeets-tab" data-bs-toggle="tab" data-bs-target="#nav-tzeets" type="button" role="tab" aria-controls="nav-tzeets" aria-selected="true">Tzeets</button>
+                        <button class="nav-link fw-bold" id="nav-tzeetsReplies-tab"  data-bs-toggle="tab" data-bs-target="#nav-tzeetsReplies" type="button" role="tab" aria-controls="nav-tzeetsReplies" aria-selected="true">Tzeets & replies</button>
+                        <button class="nav-link fw-bold" id="nav-media-tab"  data-bs-toggle="tab" data-bs-target="#nav-media" type="button" role="tab" aria-controls="nav-media" aria-selected="false">Media</button>
+                        <button class="nav-link fw-bold" id="nav-links-tab" data-bs-toggle="tab" data-bs-target="#nav-links" type="button" role="tab" aria-controls="nav-links" aria-selected="false">Links</button>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-tzeets" role="tabpanel" aria-labelledby="nav-tzeets-tab" tabindex="0">
+                        <!-- Tzeets -->
+                        <div class="px-4 py-3 twiter border-start border-end border-bottom">
+                            <div>
+                                <img src="image/gato1.jpg" class="rounded-circle" width="64">
+                                <span class="nome">Atila lamarino</span>
+                                <span class="infoUser">@oatila Oct 21,2021</span>
                             </div>
-                            <div class="d-flex mt-1">
-                                <div class="d-flex justify-content-evenly me-auto align-self-end w-50">
-                                    <a href="">
-                                        <i class="text-dark rounded-circle colorBlue px-1 bi bi-card-image "></i>
-                                    </a>
-                                    <a href="">
-                                        <i class="text-dark rounded-circle colorBlue px-1 bi bi-filetype-gif"></i>
-                                    </a>
-                                    <a href="">
-                                        <i class="text-dark rounded-circle colorBlue px-1 bi bi-emoji-smile"></i>
-                                    </a>
-                                    <a href="">
-                                        <i class="text-dark rounded-circle colorBlue px-1 bi bi-bar-chart"></i>
-                                    </a>
-                                    <a href="">
-                                        <i class="text-dark rounded-circle colorBlue px-1 bi bi-calendar-event"></i>
-                                    </a>
-                                    <a href="">
-                                        <i class="text-dark rounded-circle colorBlue px-1 bi bi-geo-alt"></i>
-                                    </a>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <span class="mx-2"></span>
-                                    <div class="bg-black h-75 mx-2" style="width: 1px;"></div>
-                                    <a href="">
-                                        <i class="text-dark rounded-circle colorBlue px-1 bi bi-plus-circle mx-2"></i>
-                                    </a>
-                                    <button type="button" class="mx-2 btn btn-primary" disabled>Enviar</button>
-                                </div>
+    
+                            <div class="content">
+                                Se vai furar orçamento, dá pra voltar a financiar absorventes e ciência? Ou só voto mesmo?
+                            </div>
+    
+                            <div class="container">
+                                <ul class="nav justify-content-center action">
+                                    <li class="col-2 nav-item d-flex justify-content-center">
+                                        <a href="Reply">
+                                            <i class="p-2 rounded-circle bi bi-chat"></i>
+                                            200
+                                        </a>    
+                                    </li>
+                                    <li class="col-2 nav-item d-flex justify-content-center">
+                                        <a href="Retzeet">
+                                            <i class="p-2 rounded-circle bi bi-arrow-repeat"></i>
+                                            100
+                                        </a>    
+                                    </li>
+                                    <li class="col-2 nav-item d-flex justify-content-center">
+                                        <a href="Like">
+                                            <i class="p-2 rounded-circle bi bi-heart"></i>
+                                            120
+                                        </a>    
+                                    </li>
+                                    <li class="col-2 nav-item d-flex justify-content-center">
+                                        <a href="Share">
+                                            <i class="p-2 rounded-circle bi bi-upload"></i>
+                                            
+                                        </a>    
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <div class="px-4 py-3 twiter border-start border-end border-bottom">
+                            <div>
+                                <img src="image/gato.jpg" class="rounded-circle" width="64">
+                                <span class="nome">Bruno Góis Mateus</span>
+                                <span class="infoUser">@brunomateuss Jun 1,2011</span>
+                            </div>
+    
+                            <div class="content">
+                                something really bad is happing in somewhere in the world.. gmal is off
+                            </div>
+    
+                            <div class="container">
+                                <ul class="nav justify-content-center action">
+                                    <li class="col-2 nav-item d-flex justify-content-center">
+                                        <a href="Reply">
+                                            <i class="p-2 rounded-circle bi bi-chat"></i>
+                                            200
+                                        </a>    
+                                    </li>
+                                    <li class="col-2 nav-item d-flex justify-content-center">
+                                        <a href="Retzeet">
+                                            <i class="p-2 rounded-circle bi bi-arrow-repeat"></i>
+                                            100
+                                        </a>    
+                                    </li>
+                                    <li class="col-2 nav-item d-flex justify-content-center">
+                                        <a href="Like">
+                                            <i class="p-2 rounded-circle bi bi-heart"></i>
+                                            120
+                                        </a>    
+                                    </li>
+                                    <li class="col-2 nav-item d-flex justify-content-center">
+                                        <a href="Share">
+                                            <i class="p-2 rounded-circle bi bi-upload"></i>
+                                            
+                                        </a>    
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="tab-pane fade" id="nav-tzeetsReplies" role="tabpanel" aria-labelledby="nav-tzeetsReplies-tab" tabindex="0">
 
-                <!-- Tzeets -->
-                <div class="px-4 py-3 twiter border-start border-end border-bottom">
-                    <div>
-                        <img src="image/gato1.jpg" class="rounded-circle" width="64">
-                        <span class="nome">Atila lamarino</span>
-                        <span class="infoUser">@oatila Oct 21,2021</span>
                     </div>
-
-                    <div class="content">
-                        Se vai furar orçamento, dá pra voltar a financiar absorventes e ciência? Ou só voto mesmo?
+                    <div class="tab-pane fade" id="nav-media" role="tabpanel" aria-labelledby="nav-media-tab" tabindex="0">
+                        
                     </div>
-
-                    <div class="container">
-                        <ul class="nav justify-content-center action">
-                            <li class="col-2 nav-item d-flex justify-content-center">
-                                <a href="Reply">
-                                    <i class="p-2 rounded-circle bi bi-chat"></i>
-                                    200
-                                </a>    
-                            </li>
-                            <li class="col-2 nav-item d-flex justify-content-center">
-                                <a href="Retzeet">
-                                    <i class="p-2 rounded-circle bi bi-arrow-repeat"></i>
-                                    100
-                                </a>    
-                            </li>
-                            <li class="col-2 nav-item d-flex justify-content-center">
-                                <a href="Like">
-                                    <i class="p-2 rounded-circle bi bi-heart"></i>
-                                    120
-                                </a>    
-                            </li>
-                            <li class="col-2 nav-item d-flex justify-content-center">
-                                <a href="Share">
-                                    <i class="p-2 rounded-circle bi bi-upload"></i>
-                                    
-                                </a>    
-                            </li>
-                        </ul>
+                    <div class="tab-pane fade" id="nav-links" role="tabpanel" aria-labelledby="nav-links-tab" tabindex="0">
+                        
                     </div>
                 </div>
-
-                <div class="px-4 py-3 twiter border-start border-end border-bottom">
-                    <div>
-                        <img src="image/gato.jpg" class="rounded-circle" width="64">
-                        <span class="nome">Bruno Góis Mateus</span>
-                        <span class="infoUser">@brunomateuss Jun 1,2011</span>
-                    </div>
-
-                    <div class="content">
-                        something really bad is happing in somewhere in the world.. gmal is off
-                    </div>
-
-                    <div class="container">
-                        <ul class="nav justify-content-center action">
-                            <li class="col-2 nav-item d-flex justify-content-center">
-                                <a href="Reply">
-                                    <i class="p-2 rounded-circle bi bi-chat"></i>
-                                    200
-                                </a>    
-                            </li>
-                            <li class="col-2 nav-item d-flex justify-content-center">
-                                <a href="Retzeet">
-                                    <i class="p-2 rounded-circle bi bi-arrow-repeat"></i>
-                                    100
-                                </a>    
-                            </li>
-                            <li class="col-2 nav-item d-flex justify-content-center">
-                                <a href="Like">
-                                    <i class="p-2 rounded-circle bi bi-heart"></i>
-                                    120
-                                </a>    
-                            </li>
-                            <li class="col-2 nav-item d-flex justify-content-center">
-                                <a href="Share">
-                                    <i class="p-2 rounded-circle bi bi-upload"></i>
-                                    
-                                </a>    
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
             </div>
 
             <!-- Coluna 3  -->
