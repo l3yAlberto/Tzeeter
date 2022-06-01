@@ -21,14 +21,14 @@ function inputEvent(div) {
 
     textArea.addEventListener("input", (ev) => {
         // console.log(ev);
-        let textIsEmpty = !/\S/.test(textArea.innerText);
+        let buttonDisabled = !/\S/.test(textArea.innerText);
         const restanteCaracter = (140 - textArea.innerText.length);
 
-        if (!textIsEmpty && restanteCaracter < 40) {
+        if (!buttonDisabled && restanteCaracter < 40) {
             countSpan.textContent = restanteCaracter;
 
             if (restanteCaracter < 0) {
-                textIsEmpty = true;
+                buttonDisabled = true;
                 countSpan.style.color = "rgb(255, 0, 0)";
             } else {
                 countSpan.style.color = "rgb(255, 200, 0)";
@@ -37,8 +37,8 @@ function inputEvent(div) {
             countSpan.textContent = "";
         }
 
-        buttonEnviar.disabled = textIsEmpty;
+        buttonEnviar.disabled = buttonDisabled;
         
-        // console.log(textIsEmpty, restanteCaracter);
+        // console.log(buttonDisabled, restanteCaracter);
     })   
 }
