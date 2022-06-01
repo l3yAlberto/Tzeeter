@@ -79,21 +79,27 @@ ul {
     text-decoration: underline;
 }
 
-.action [href*="Reply"] > i:hover, .action [href*="Share"] > i:hover {
-    background-color: rgba(29, 155, 240, 0.1);
+.action [href*="Reply"]:hover, .action [href*="Share"]:hover {
     color: rgba(29, 155, 240, 1);
 }
 
-.action [href*="Retzeet"] > i:hover {
-    background-color: rgba(0, 186, 124, 0.1);
+.action [href*="Reply"]:hover i, .action [href*="Share"]:hover {
+    background-color: rgba(29, 155, 240, 0.1);
+}
+
+.action [href*="Retzeet"]:hover {
     color: rgba(0, 186, 124, 1);
+}
+
+.action [href*="Retzeet"]:hover i {
+    background-color: rgba(0, 186, 124, 0.1);
 }
 
 .action [href*="Like"]:hover {
     color: rgba(249, 24, 128, 1);
 }
 
-.action [href*="Like"] > i:hover, .twiter:hover {
+.action [href*="Like"]:hover i, .twiter:hover {
     background-color: rgba(249, 24, 128, 0.1);
 }
 
@@ -115,5 +121,5 @@ ul {
 } 
 
 [contentEditable=true] {
-    word-break: break-all;
+    word-break: break-word;
 }
