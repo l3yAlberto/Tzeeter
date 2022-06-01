@@ -10,4 +10,4 @@
 
 ### [Lista 03 - Usando o Bootstrap em nosso favor](https://github.com/l3yAlberto/Tzeeter/tree/a2a339a8719aaeafc26095dd3076d094cdf4196a)
 
-### [Lista 04 - Usando Js para limitar o tamanho dos Tzeets](https://github.com/l3yAlberto/Tzeeter/tree/3520020e3bc86dfcebdae1a7205b75ba46c5bbbf)
+### [Lista 04 - Usando Js para limitar o tamanho dos Tzeets](https://github.com/l3yAlberto/Tzeeter/tree/12456fec6de360158beae7af81f4105e9ea6435c)
