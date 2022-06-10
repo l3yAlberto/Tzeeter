@@ -69,18 +69,18 @@
                 <div class="form-floating w-75">
                     <select class="form-select" id="mes" aria-label="Floating label select example" required>
                         <option selected></option>
-                        <option value="Janeiro">Janeiro</option>
-                        <option value="Fevereiro">Fevereiro</option>
-                        <option value="Março">Março</option>
-                        <option value="Abril">Abril</option>
-                        <option value="Maio">Maio</option>
-                        <option value="Junho">Junho</option>
-                        <option value="Julho">Julho</option>
-                        <option value="Agosto">Agosto</option>
-                        <option value="Setembro">Setembro</option>
-                        <option value="Outubro">Outubro</option>
-                        <option value="Novembro">Novembro</option>
-                        <option value="Dezembro">Dezembro</option>
+                        <option value="0">Janeiro</option>
+                        <option value="1">Fevereiro</option>
+                        <option value="2">Março</option>
+                        <option value="3">Abril</option>
+                        <option value="4">Maio</option>
+                        <option value="5">Junho</option>
+                        <option value="6">Julho</option>
+                        <option value="7">Agosto</option>
+                        <option value="8">Setembro</option>
+                        <option value="9">Outubro</option>
+                        <option value="10">Novembro</option>
+                        <option value="11">Dezembro</option>
                     </select>
                     <label for="mes">Mês</label>
                     <div class="invalid-feedback">
@@ -160,25 +160,25 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        
         <script>
             window.addEventListener('load', () => {
                 const fullYear = new Date().getFullYear();
 
-                const calendario = {
-                    "Janeiro": 31,
-                    "Fevereiro": 29,
-                    "Março": 31,
-                    "Abril": 30,
-                    "Maio": 31,
-                    "Junho": 30,
-                    "Julho": 31,
-                    "Agosto": 31,
-                    "Setembro": 30,
-                    "Outubro": 31,
-                    "Novembro": 30,
-                    "Dezembro": 31
-                }
+                const calendario = [
+                    { mes: "Janeiro", dias: 31 },
+                    { mes: "Fevereiro", dias: 29 },
+                    { mes: "Março", dias: 31 },
+                    { mes: "Abril", dias: 30 },
+                    { mes: "Maio", dias: 31 },
+                    { mes: "Junho", dias: 30 },
+                    { mes: "Julho", dias: 31 },
+                    { mes: "Agosto", dias: 31 },
+                    { mes: "Setembro", dias: 30 },
+                    { mes: "Outubro", dias: 31 },
+                    { mes: "Novembro", dias: 30 },
+                    { mes: "Dezembro", dias: 31 },
+                ];
+
                 const mes = document.getElementById("mes");
                 const dia = document.getElementById("dia");
                 const ano = document.getElementById("ano");
@@ -189,11 +189,11 @@
                 const password2 = document.getElementById("floatingPassword2");
                 const passFeedback1 = document.getElementById("passFeedback1");
                 const passFeedback2 = document.getElementById("passFeedback2");
-                const closeBtn = document.getElementById("closeBtn");
-
                 const nascimento = document.getElementById("nascimento");
-                
+
                 function bissexto(ano) {
+                    if (!ano) return;
+
                     if (ano % 4 == 0) {
                         if (ano % 100 == 0) {
                             if (ano % 400 == 0) {
@@ -203,75 +203,67 @@
                     } else return false
                 }
 
-                mes.addEventListener("change", (ev) => {
-                    if (!ano.value) calendario["Fevereiro"] = 29;
-                    else if (bissexto(ano.value)) {
-                        calendario["Fevereiro"] = 29;
-                    } else calendario["Fevereiro"] = 28;
+                function updateSelectDia(dias) {
+                    if (dia.total === dias) return;
 
-                    const index = calendario[mes.value];
-                    if (!index) return;
+                    const oldValueDia = dia.value;
 
-                    const oldValue = dia.value;
                     dia.innerHTML = "<option selected></option>";
-                    let diasHTML = "";
-                    for (let i = 1; i <= index; i++) {
-                        diasHTML += `<option value="${i}">${i}</option>`;
+                    let diasHtml = "";
+                    for (let i = 1; i <= dias; i++) {
+                        diasHtml += `<option value="${i}">${i}</option>`;
                     }
-                    dia.innerHTML += diasHTML;
+                    dia.innerHTML += diasHtml;
+                    
+                    dia.value = oldValueDia <= dias ? oldValueDia : "";
+                    dia.total = dias;
+                }
 
-                    if (oldValue && oldValue <= index) {
-                        dia.value = oldValue;
+                function updateSelectAno(bisSexto) {
+                    if (ano.bisSexto === bisSexto) return;
+
+                    const oldValueAno = ano.value;
+                    let anoStart = fullYear;
+                    if (bisSexto)  while(!bissexto(anoStart)) anoStart--;
+
+                    ano.innerHTML = "<option selected></option>";
+                    let anosHtml = "";
+                    const intervalo = bisSexto ? 4 : 1;
+                    for (; anoStart >= 1900 ; anoStart -= intervalo) {
+                        anosHtml += `<option value="${anoStart}">${anoStart}</option>`;
                     }
-                });
-
-                dia.addEventListener("change", (ev) => {
-                    let anoBis = fullYear;
-                    const oldValue = ano.value;
-                    if (dia.value == 29 && mes.value == "Fevereiro") {
-                        if (ano.bissexto === true) return;
-                        ano.bissexto = true;
-                        while(!bissexto(anoBis)) anoBis--;
-
-                        ano.innerHTML = "<option selected></option>";
-                        let anosHTML = "";
-                        for (let i = 0; anoBis >= 1900; i++) {
-                            anosHTML += `<option value="${anoBis}">${anoBis}</option>`;
-                            anoBis -= 4;
-                        }
-                        ano.innerHTML += anosHTML;
-
-                        if (oldValue && bissexto(oldValue)) {
-                            ano.value = oldValue;
-                        }
-                    } else {
-                        ano.bissexto = false;
-                        ano.innerHTML = "<option selected></option>";
-                        let anosHTML = "";
-                        for (; anoBis >= 1900; anoBis--) {
-                            anosHTML += `<option value="${anoBis}">${anoBis}</option>`;
-                        }
-                        ano.innerHTML += anosHTML;
-                        ano.value = oldValue;
-                    }
-                });
+                    ano.innerHTML += anosHtml;
+                    
+                    ano.value = !bisSexto ? oldValueAno : bissexto(oldValueAno) ? oldValueAno : "";
+                    ano.bisSexto = bisSexto;
+                }
 
                 form.reset();
+                buttom.disabled = true;
+                updateSelectAno(false);
+
+                nascimento.addEventListener('change', (ev) => {
+                    calendario[1].dias = (!ano.value || bissexto(ano.value)) ? 29 : 28;
+
+                    if (mes.value != "") {
+                        const diasMes = calendario[parseInt(mes.value)].dias;
+                        updateSelectDia(diasMes);
+                    }    
+
+                    if (mes.value === "1" && dia.value === "29") {
+                        updateSelectAno(true);
+                    } else updateSelectAno(false);
+                });
+
                 form.addEventListener('input', () => {
                     form.classList.add('was-validated');
+
                     let passwordValido = false;
+                    const senhaDif = "As palavras-passe não coincidem. Tente novamente.";
+                    const senhaInv = "A senha é obrigatória e deve ter pelo menos 6 caracteres.";
 
-                    if (/\S{6,}/.test(password1.value)) {
-                        passFeedback1.innerText = "As palavras-passe não coincidem. Tente novamente.";
-                    } else {
-                        passFeedback1.innerText = "A senha é obrigatória e deve ter pelo menos 6 caracteres.";
-                    }
-
-                    if (/\S{6,}/.test(password2.value)) {
-                        passFeedback2.innerText = "As palavras-passe não coincidem. Tente novamente.";
-                    } else {
-                        passFeedback2.innerText = "A senha é obrigatória e deve ter pelo menos 6 caracteres.";
-                    }
+                    passFeedback1.innerText = /\S{6,}/.test(password1.value) ? senhaDif: senhaInv;
+                    passFeedback2.innerText = /\S{6,}/.test(password2.value) ? senhaDif: senhaInv;
 
                     if (password1.value != password2.value) {
                         password1.classList.add("is-invalid");
@@ -285,13 +277,9 @@
                     buttom.disabled = !(form.checkValidity() && termoCheck.checked && passwordValido);
                 });
 
-
-
                 form.addEventListener('submit', function (event) {
                     event.preventDefault();
                     event.stopPropagation();
-
-                    form.classList.add('was-validated');
                 }, false);
             })
         </script>
