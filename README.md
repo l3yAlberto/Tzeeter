@@ -12,4 +12,4 @@
 
 ### [Lista 04 - Usando Js para limitar o tamanho dos Tzeets](https://github.com/l3yAlberto/Tzeeter/tree/8bd79e0a97b9662b0503b8d9a0ccca3e8811f97b)
 
-### [Lista 05 - Formulário e validação - Login & Cadastro](https://github.com/l3yAlberto/Tzeeter/tree/c0fa28cf6043e0402db4902215329efb3d601578)
+### [Lista 05 - Formulário e validação - Login & Cadastro](https://github.com/l3yAlberto/Tzeeter/tree/e2da103d8a7fcaffd07eb84b9a80da5bf804749a)
