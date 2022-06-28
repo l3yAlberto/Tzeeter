@@ -14,4 +14,4 @@
 
 ### [Lista 05 - Formulário e validação - Login & Cadastro](https://github.com/l3yAlberto/Tzeeter/tree/e2da103d8a7fcaffd07eb84b9a80da5bf804749a)
 
-### [Lista 06 - Componentização e Rotas Vue + Vue Router](https://github.com/l3yAlberto/Tzeeter/tree/7d848ecbdfae2fcdc0d0b2642e6419fab7d438af)
+### [Lista 06 - Componentização e Rotas Vue + Vue Router](https://github.com/l3yAlberto/Tzeeter/tree/b91b3cbac807479e96d21271dbe1997a6605899b)
