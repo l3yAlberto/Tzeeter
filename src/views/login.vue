@@ -1,7 +1,9 @@
 <template>
   <div class="bg-secondary">
     <form @load="loadEvent" class="position-absolute top-50 start-50 translate-middle p-3 needs-validation bg-light rounded" novalidate>
-      <a href="index.html"><img class="mx-auto d-flex" src="../assets/tiziu.png"></a>
+      <router-link to="/">
+        <img class="mx-auto d-flex" src="../assets/tiziu.png">
+      </router-link>
 
       <h4>
         <b>Entre no Tzeet agora mesmo</b>
@@ -30,7 +32,8 @@
 </template>
 
 <script setup>
-  import { onMounted } from 'vue';
+  import { onMounted, onUnmounted } from 'vue';
+  onUnmounted(() => document.querySelector("body").classList.remove("bg-secondary"));
   onMounted(() => {
     document.querySelector("body").classList.add("bg-secondary");
     const form = document.querySelector('.needs-validation');

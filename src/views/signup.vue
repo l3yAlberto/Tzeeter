@@ -126,7 +126,8 @@
 </template>
 
 <script setup>
-  import { onMounted } from 'vue';
+  import { onMounted, onUnmounted } from 'vue';
+  onUnmounted(() => document.querySelector("body").classList.remove("bg-secondary"));
   onMounted(() => {
     document.querySelector("body").classList.add("bg-secondary");
     const fullYear = new Date().getFullYear();
